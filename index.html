@@ -1,72 +1,119 @@
 <!DOCTYPE html>
 <head>
     <style>
-        body {
-            font-family: arial;
-        }
-        header {
-            text-align: right;
-            height: 8em;
-            margin-bottom: 14em;
-        }
-        header a {
-            text-decoration: none;
-            color: inherit;
-        }
-        header a:hover {
-            text-decoration: underline;
-        }
-        .navButton {
-            display: inline;
-            margin: 1em 0.5em;
-        }
-        .navButtonImage:hover {
-            outline: 1px solid rgb(198, 198, 198);
-        }
-        .gApps {
-            width: 2em;
-            margin: 0 0.5em -0.6em 0.5em;
-        }
-        .notificationCount {
-            width: 1.5em;
-            margin: 0 0.5em -0.35em 0.5em;
-        }
-        .profileButton {
-            width: 2.5em;
-            margin: 0 0.5em -0.7em 0.5em;
-        }
-        #centerLogo {
-            width: 20em;
-            display: block;
-            margin: 4em auto;
-        }
-        #searchBox {
-            display: block;
-            width: 40em;
-            height: 2.5em;
-            margin: 0 auto 2em auto;
-            border: none;
-            outline: 2px solid rgba(190, 190, 190, 0.58);
-        }
-        #searchBox:hover {
-            outline-width: 3px;
-            outline-color: rgba(207, 207, 207, 0.48);
-        }
-        .searchButtonContainer {
-            text-align: center;
-        }
-        .searchButton {
-            margin: 1em 0.5em;
-            font-weight: bold;
-            color: rgb(62, 62, 62);
-            font-size: 1.5em;
-            text-decoration: none;
-            background: rgba(199, 199, 199, 0.43);
-            padding: 0.3em 0.5em;
-        }
-        .searchButton:hover {
-            outline: 2px solid rgba(190, 190, 190, 0.58);
-        }
+
+            * {
+              -webkit-box-sizing: border-box;
+                 -moz-box-sizing: border-box;
+                      box-sizing: border-box;
+            }
+            body {
+                font-family: arial, sans-serif;
+                margin: 0;
+            }
+            header {
+                text-align: right;
+                height: 8em;
+                margin: 1em 0 10em 0;
+            }
+            header a {
+                text-decoration: none;
+                color: inherit;
+            }
+            header a:hover {
+                text-decoration: underline;
+            }
+            .navButton {
+                display: inline;
+                margin: 1em 0.5em;
+            }
+            .navButtonImage:hover {
+                outline: 1px solid rgb(198, 198, 198);
+            }
+            .gApps {
+                width: 2em;
+                margin: 0 0.5em -0.6em 0.5em;
+            }
+            .notificationCount {
+                width: 1.5em;
+                margin: 0 0.5em -0.35em 0.5em;
+            }
+            .profileButton {
+                width: 2.5em;
+                margin: 0 0.5em -0.7em 0.5em;
+            }
+            #centerLogo {
+                width: 20em;
+                display: block;
+                margin: 4em auto;
+            }
+            #searchBox {
+                display: block;
+                width: 40em;
+                height: 2.5em;
+                margin: 0 auto 2em auto;
+                border: none;
+                outline: 2px solid rgba(190, 190, 190, 0.58);
+            }
+            #searchBox:hover {
+                outline-width: 3px;
+                outline-color: rgba(207, 207, 207, 0.48);
+            }
+            .searchButtonContainer {
+                text-align: center;
+            }
+            .searchButton {
+                margin: 1em 0.5em;
+                font-weight: bold;
+                color: rgb(111, 111, 111);
+                font-size: 1em;
+                text-decoration: none;
+                background: rgba(199, 199, 199, 0.2);
+                padding: 0.7em 0.9em;
+            }
+            .searchButton:hover {
+                outline: 2px solid rgba(190, 190, 190, 0.58);
+            }
+            footer {
+                color: rgb(111, 111, 111);
+                position: relative;
+                background: rgba(199, 199, 199, 0.2);
+                height: 6em;
+                margin: 2em auto 0 auto;
+                padding: 1em 2em;
+            }
+            #location {
+                margin-left: 1em;
+            }
+            #bottomLeft {
+                position: absolute;
+                max-width: 20em;
+                bottom: 1em;
+
+            }
+            #bottomRight {
+                position: absolute;
+                max-width: 20em;
+                right: 2em;
+                bottom: 1em;
+            }
+            .bottomButton {
+                margin: 0 1em;
+            }
+            footer a {
+                text-decoration: none;
+            }
+            footer a:visited {
+                color: inherit;
+            }
+            #separatorBottom {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 3em;
+                width: 100%;
+                border-bottom: 1px solid lightgrey;
+            }
     </style>
 </head>
 
@@ -80,18 +127,40 @@
         <img class="notificationCount navButtonImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpeMSmkrA7GssoSzGn104DcqA89GOQCmh6XA87_CDFzjPqhZcg" alt="Number of unread notifications" />
         <img class="profileButton navButtonImage" src="https://i.pinimg.com/favicons/8c76af88c01b116a4a3973d7b54529cf962551cea63b1fb695598d94.ico?628e899ec455934372645b238b0b73b5" alt="Link to your profile" />
     </header>
+
     <!--Logo-->
-    <div id="centerLogoArea">
+    <span id="centerLogoArea">
         <img id="centerLogo" src="https://booglebookclub.com/images/logo.png" alt="Logo" />
-    </div>
+    </span>
+
     <!--Search box-->
     <input type="text" id="searchBox" />
+
     <!--Search buttons-->
     <div class="searchButtonContainer">
         <a class="searchButton" href="#">Boogle search</a>
         <a class="searchButton" href="#">I'm feeling boogly</a>
     </div>
     <footer>
+        <!--Your location name-->
+        <div id="location">
+            Latvia
+        </div>
 
+        <!--Separator line-->
+        <div id="separatorBottom">
+        </div>
+        <!--Other links-->
+        <span id="bottomLeft">
+            <a class="advertising bottomButton" href="#">Advertising</a>
+            <a class="business bottomButton" href="#">Business</a>
+            <a class="about bottomButton" href="#">About</a>
+        </span>
+
+        <span id="bottomRight">
+            <a class="privacy bottomButton" href="#">Privacy</a>
+            <a class="terms bottomButton" href="#">Terms</a>
+            <a class="settings bottomButton" href="#">Settings</a>
+        </span>
     </footer>
 </body>
