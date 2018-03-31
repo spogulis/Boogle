@@ -28,7 +28,7 @@
                 margin: 1em 0.5em;
             }
             .navButtonImage:hover {
-                outline: 1px solid rgb(198, 198, 198);
+                box-shadow: 0 0 10px #9ecaed;
             }
             .gApps {
                 width: 2em;
@@ -53,11 +53,14 @@
                 height: 2.5em;
                 margin: 0 auto 2em auto;
                 border: none;
-                outline: 2px solid rgba(190, 190, 190, 0.58);
+                outline: 1px solid rgba(190, 190, 190, 0.58);
             }
             #searchBox:hover {
-                outline-width: 3px;
-                outline-color: rgba(207, 207, 207, 0.48);
+                outline: none;
+                box-shadow: 0 0 10px #9ecaed;
+            }
+            #searchBox:enabled {
+                box-shadow: 0 0 10px #9ecaed;
             }
             .searchButtonContainer {
                 text-align: center;
@@ -72,7 +75,8 @@
                 padding: 0.7em 0.9em;
             }
             .searchButton:hover {
-                outline: 2px solid rgba(190, 190, 190, 0.58);
+                box-shadow: 0 0 10px #9ecaed;
+
             }
             footer {
                 color: rgb(111, 111, 111);
@@ -82,23 +86,19 @@
                 margin: 2em auto 0 auto;
                 padding: 1em 2em;
             }
-            #location {
-                margin-left: 1em;
-            }
             #bottomLeft {
                 position: absolute;
                 max-width: 20em;
                 bottom: 1em;
-
             }
             #bottomRight {
                 position: absolute;
                 max-width: 20em;
-                right: 2em;
+                right: 1em;
                 bottom: 1em;
             }
             .bottomButton {
-                margin: 0 1em;
+                margin: 0 1em 0 0;
             }
             footer a {
                 text-decoration: none;
