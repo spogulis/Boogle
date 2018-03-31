@@ -86,12 +86,12 @@
                 margin: 2em auto 0 auto;
                 padding: 1em 2em;
             }
-            #bottomLeft {
+            .bottomLeft {
                 position: absolute;
                 max-width: 20em;
                 bottom: 1em;
             }
-            #bottomRight {
+            .bottomRight {
                 position: absolute;
                 max-width: 20em;
                 right: 1em;
@@ -113,6 +113,9 @@
                 bottom: 3em;
                 width: 100%;
                 border-bottom: 1px solid lightgrey;
+            }
+            footer a:hover {
+                text-decoration: underline;
             }
     </style>
 </head>
@@ -151,13 +154,13 @@
         <div id="separatorBottom">
         </div>
         <!--Other links-->
-        <span id="bottomLeft">
+        <span class="bottomLeft">
             <a class="advertising bottomButton" href="#">Advertising</a>
             <a class="business bottomButton" href="#">Business</a>
             <a class="about bottomButton" href="#">About</a>
         </span>
 
-        <span id="bottomRight">
+        <span class="bottomRight">
             <a class="privacy bottomButton" href="#">Privacy</a>
             <a class="terms bottomButton" href="#">Terms</a>
             <a class="settings bottomButton" href="#">Settings</a>
