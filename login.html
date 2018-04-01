@@ -44,14 +44,13 @@
             #boogleLogo {
                 width: 5em;
                 margin: 0 0 1em 0;
-
             }
             #signIn {
                 font-family: 'Roboto', arial, sans-serif;
                 color: #212121;
                 font-size: 24px;
                 line-height: 1.3333;
-                font-weight: 500;
+                font-weight: 400;
             }
             #withGoogle {
                 font-family: 'Roboto', arial, sans-serif;
@@ -67,18 +66,27 @@
                 border: none;
                 border-bottom: 1px solid lightgrey;
                 color: grey;
-                margin: 0 0 2.5em 0;
+            }
+            input:focus::placeholder {
+                position: absolute;
+                top: 2em;
+            }
+            /* #emailField:focus {
+                position:absolute;
+                font-size: 11px;
+                width: 82%;
+                top: 1em;
+            } */
+            #forgotContainer {
+                margin: 2.5em 0 1.5em 0;
             }
             #forgot {
                 font-family: 'Roboto', arial, sans-serif;
-                display: block;
                 font-weight: 400;
                 font-size: inherit;
                 font-size: 14px;
-                margin: 0 0 1.5em 0;
                 color: #4285F4;
             }
-
             #insecurePC {
                 font-family: 'Roboto', arial, sans-serif;
                 display: inline;
@@ -106,7 +114,7 @@
                 font-family: roboto,arial,sans-serif;
                 color: #fff;
                 background: #4285F4;
-                font-weight: 600;
+                font-weight: 400;
                 font-size: 14px;
                 text-transform: uppercase;
                 padding: 0.6em 1.6em;
@@ -146,15 +154,20 @@
     <!--Login screen-->
     <div id="loginScreen">
         <!--Google logo-->
+            <a href="index.html">
             <img id="boogleLogo" src="https://booglebookclub.com/images/logo.png" alt="Boogle logo" /> <br />
-
+            </a>
         <!--Two lines of text-->
             <div id="signIn">Sign in</div><br />
             <div id="withGoogle">with your Google account</div><br />
-        <!--E-mail input field-->
-            <input id="emailField" type="text" id="email" name="" value="Email or phone" onfocus="value=''" onblur="value='Email or phone'"/> <br />
+        <!--E-mail input field
+        <input id="emailField" type="text" id="email" name="" value="Email or phone" onfocus="value=''" onblur="value='Email or phone'"/> <br />-->
+            <input id="emailField" type="text" placeholder="Email or phone" /><br />
+
         <!--Forgot e-mail-->
-            <a id="forgot" href="#">Forgot email?</a><br />
+            <div id="forgotContainer">
+                <a id="forgot" href="#">Forgot email?</a><br />
+            </div>
         <!-- Text and a link to a private window -->
             <div id="securityContainer">
                 <div id="insecurePC">Not your computer? Use a Private Window to sign in</div>
