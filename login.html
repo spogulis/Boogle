@@ -59,24 +59,38 @@
                 color: #212121;
                 margin: -1.2em 0 3em 0;
             }
-            #emailField {
+            .userInputWarp {
+                position: relative;
+            }
+            .userInputWarp .inputText {
                 width: 100%;
-                font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-                font-size: 14px;
+                outline: none;
                 border: none;
                 border-bottom: 1px solid lightgrey;
-                color: grey;
             }
-            input:focus::placeholder {
+            .userInputWarp .inputText:invalid {
+                box-shadow: none !important;
+            }
+            .userInputWarp .inputText:focus {
+                border-color: #4285F4;
+                border-width: medium medium 2px;
+            }
+            .userInputWarp .floatingLabel {
                 position: absolute;
-                top: 2em;
-            }
-            /* #emailField:focus {
-                position:absolute;
-                font-size: 11px;
-                width: 82%;
+                pointer-events: none;
                 top: 1em;
-            } */
+                transition: 0.2s ease all;
+                color: grey;
+                font-size: 14px;
+                font-family: Roboto,Helvetica,Arial,sans-serif;
+            }
+            .userInputWarp input:focus ~ .floatingLabel,
+            .userInputWarp input:not(:focus):valid ~ .floatingLabel {
+                top: -1em;
+                font-size: 11px;
+                opacity: 1;
+                color: #4285F4;
+            }
             #forgotContainer {
                 margin: 2.5em 0 1.5em 0;
             }
@@ -160,9 +174,12 @@
         <!--Two lines of text-->
             <div id="signIn">Sign in</div><br />
             <div id="withGoogle">with your Google account</div><br />
-        <!--E-mail input field
-        <input id="emailField" type="text" id="email" name="" value="Email or phone" onfocus="value=''" onblur="value='Email or phone'"/> <br />-->
-            <input id="emailField" type="text" placeholder="Email or phone" /><br />
+        <!--E-mail input field-->
+            <div class="userInputWarp">
+                <br />
+                <input class="inputText" type="text" required /><br />
+                <span class="floatingLabel">Email or phone</span>
+            </div>
 
         <!--Forgot e-mail-->
             <div id="forgotContainer">
