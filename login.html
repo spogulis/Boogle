@@ -3,25 +3,30 @@
     <style>
             /*Embed Roboto font*/
             <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+            /* Embed box sizing */
+            * {
+                  -webkit-box-sizing: border-box;
+                     -moz-box-sizing: border-box;
+                          box-sizing: border-box;
+            }
             body {
-                font-family: roboto, arial, sans-serif;
+                font-family: 'Roboto', arial, sans-serif;
                 line-height: 20px;
                 background: rgba(222, 222, 222, 0.74);
             }
             a {
                 text-decoration: none;
             }
-            a:visited {
-                color: #4285F4;
-            }
+            /* Color visited links blue */
+
             header {
                 height: 4em;
             }
             footer {
                 color: #757575;
                 position: relative;
-                height: 4em;
-                width: 27%;
+                height: 2.5em;
+                width: 36%;
                 margin: 0 auto;
             }
             footer a {
@@ -33,6 +38,7 @@
                 margin: 0 auto;
                 padding: 2.5em;
                 background: white;
+                padding-bottom: 7em;
             }
             #boogleLogo {
                 width: 5em;
@@ -40,11 +46,13 @@
 
             }
             #signIn {
+                font-family: 'Roboto', arial, sans-serif;
                 color: #212121;
                 font-size: 24px;
                 line-height: 1.3333;
             }
             #withGoogle {
+                font-family: 'Roboto', arial, sans-serif;
                 font-size: 14px;
                 font-weight: 400;
                 color: #212121;
@@ -57,37 +65,42 @@
                 border: none;
                 border-bottom: 1px solid lightgrey;
                 color: grey;
-                margin: 0 0 1em 0;
+                margin: 0 0 1.5em 0;
             }
             #forgot {
+                font-family: 'Roboto', arial, sans-serif;
                 display: block;
                 font-weight: 400;
                 font-size: inherit;
-                font-size: 16px;
+                font-size: 14px;
                 margin: 0 0 1.5em 0;
+                color: #4285F4;
             }
 
             #insecurePC {
+                font-family: 'Roboto', arial, sans-serif;
                 display: inline;
                 color: grey;
                 font-weight: 400;
-                font-size: 14px;
-                margin: 3em 0 0 0;
+                font-size: 12px;
             }
             #learnMore {
                 font-weight: 400;
                 font-size: 12px;
+                color: #4285F4;
             }
             #createAccount {
-                display: block;
+                position: absolute;
+                left: 2.5em;
+                bottom: 5em;
                 font-weight: 400;
-                font-size: 14px;
-                margin: 3em 0 0 0;
+                font-size: 16px;
+                color: #4285F4;
             }
             #nextButton {
                 position: absolute;
                 right: 2.5em;
-                bottom: 2.5em;
+                bottom: 5em;
                 font-family: roboto,arial,sans-serif;
                 color: #fff;
                 background: #4285F4;
@@ -100,21 +113,24 @@
             }
             .bottomRightLinks {
                 margin: 0 0 0 auto;
-                width: 45%;
+                width: 47%;
                 font-size: 12px;
 
             }
-            a footer {
-                color: grey;
-            }
-            a footer:visited {
-                color: grey;
-            }
             .bottomRightButton {
-                margin: 0 1em;
-                font-weight: 500;
-            }
 
+                font-weight: 500;
+                color: #757575;
+                padding: 6px 16px;
+            }
+            #securityContainer {
+                margin: 0 0 2em 0;
+            }
+            #bottomRightLinksContainer {
+                font-size: 12px;
+                text-align: right;
+                margin: 1.5em 0 0 0;
+            }
     </style>
 </head>
 
@@ -128,32 +144,34 @@
     <!--Login screen-->
     <div id="loginScreen">
         <!--Google logo-->
-        <img id="boogleLogo" src="https://booglebookclub.com/images/logo.png" alt="Boogle logo" /> <br />
-        <div id="signIn">Sign in</div><br />
+            <img id="boogleLogo" src="https://booglebookclub.com/images/logo.png" alt="Boogle logo" /> <br />
 
-
-        <div id="withGoogle">with your Google account</div><br />
-        <input id="emailField" type="text" id="email" name="" value="Email or phone" onfocus="value=''" onblur="value='Email or phone'"/> <br />
-        <a id="forgot" href="#">Forgot email?</a><br />
-        <div id="insecurePC">Not your computer? Use a Private Window to sign in</div>
-        <a id="learnMore" href="#">Learn more</a><br />
-        <a id="createAccount" href="#">Create account</a>
-        <a id="nextButton" href="#">Next</a>
-
+        <!--Two lines of text-->
+            <div id="signIn">Sign in</div><br />
+            <div id="withGoogle">with your Google account</div><br />
+        <!--E-mail input field-->
+            <input id="emailField" type="text" id="email" name="" value="Email or phone" onfocus="value=''" onblur="value='Email or phone'"/> <br />
+        <!--Forgot e-mail-->
+            <a id="forgot" href="#">Forgot email?</a><br />
+        <!-- Text and a link to a private window -->
+            <div id="securityContainer">
+                <div id="insecurePC">Not your computer? Use a Private Window to sign in</div>
+                <a id="learnMore" href="#">Learn more</a><br />
+            </div>
+        <!-- Links to create an account and to log in -->
+                <a id="createAccount" href="#">Create account</a>
+                <a id="nextButton" href="#">Next</a>
     </div>
 
-
-    <!--Login buttons-->
-
-    </div>
     <footer>
-        <!--Placeholder-->
+        <!--Bottom left language dropdown-->
 
-        <!--Other links-->
-            <div class="bottomRightLinks">
+        <!--Bottom right links-->
+            <div id="bottomRightLinksContainer">
                 <a class="help bottomRightButton" href="#">Help</a>
                 <a class="privacy bottomRightButton" href="#">Privacy</a>
                 <a class="terms bottomRightButton" href="#">Terms</a>
+
             </div>
 
     </footer>
